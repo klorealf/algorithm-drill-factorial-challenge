@@ -1,3 +1,5 @@
+require 'pry'
+
 def factorial_iterative(n)
   number = n
   current_solution = 1
@@ -9,5 +11,10 @@ def factorial_iterative(n)
 end
 
 def factorial_recursive(n)
+  if n == 0
+    1
+  else
+    n * factorial_recursive(n-1)
+  end
 end
 
