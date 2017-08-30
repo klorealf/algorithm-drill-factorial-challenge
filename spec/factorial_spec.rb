@@ -19,5 +19,19 @@ describe 'factorial_iterative' do
 end
 
 describe 'factorial_recursive' do
-  # Add tests here ...
+  known_factorials = { 0  => 1,
+                       1  => 1,
+                       5  => 120,
+                       6  => 720,
+                       7  => 5040,
+                       16 => 20922789888000 }
+
+  known_factorials.each do |number, known_factorial|
+
+    it "calculates the factorial of #{number}" do
+      calculated_factorial = factorial_iterative(number)
+      expect(calculated_factorial).to eq known_factorial
+    end
+
+  end
 end
