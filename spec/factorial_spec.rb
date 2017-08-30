@@ -32,6 +32,10 @@ describe 'factorial_recursive' do
       calculated_factorial = factorial_recursive(number)
       expect(calculated_factorial).to eq known_factorial
     end
+  end
 
-end
+  it "calculates factorial of 16" do
+    expect(factorial_recursive(16)).to eq 20922789888000
+  end
+
 end
